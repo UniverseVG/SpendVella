@@ -30,7 +30,7 @@ function ExpenseList({
   >;
 }) {
   const { data: currentUser } = useConvexQuery(api.users.getCurrentUser) as {
- 
+    data: User | undefined;
   };
   const deleteExpense = useConvexMutation(api.expenses.deleteExpense);
 
